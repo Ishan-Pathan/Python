@@ -1,0 +1,214 @@
+Q.1. Perform the following operation in the given string. 
+
+String= " Natural language processing (NLP) refers to the branch of computer science—and more 
+specifically, the branch of artificial intelligence or AI—concerned with giving computers the ability 
+to understand text and spoken words in much the same way human beings can."
+
+
+I. Count the number of spaces in a string.
+code==   String.count(" ")       //With the help of this count(" ") function it will count all the spaces in that given string
+
+output==  38
+
+
+II. Remove all of the vowels in a string.
+
+vow=[]                                  //create an empty list
+for i in String:
+    if i=='a' or i=='e' or i=='i' or i=='o' or i=='u':      //Give a condition
+        vow.append(i)                                       //append that vowvels in empty list
+    else:                                                   //print reamining string
+        print(i,end="")
+        
+        
+   output:    Ntrl lngg prcssng (NLP) rfrs t th brnch f cmptr scnc—nd mr 
+              spcfclly, th brnch f rtfcl ntllgnc r AI—cncrnd wth gvng cmptrs th blty 
+              t ndrstnd txt nd spkn wrds n mch th sm wy hmn bngs cn.
+              
+              
+   III. Find all of the words in a string that are less than 5 letters
+   
+ o=[]
+count=0
+for i in word:
+    if len(i)<5:
+        count=count+1
+        o.append(i)
+print(o)
+print("\n",count)
+
+
+output==['to', 'the', 'of', 'more', 'the', 'of', 'or', 'with', 'the', 'to', 'text', 'and', 'in', 'much', 'the', 'same', 'way', 'can.']
+          18
+
+IV. Use a dictionary comprehension to count the length of each word in a sentence.
+
+dict1={word:len(word) for word in word}
+print(dict1,end="")
+
+
+output=={'Natural': 7, 'language': 8, 'processing': 10, '(NLP)': 5, 'refers': 6, 'to': 2, 'the': 3, 'branch': 6, 'of': 2, 'computer': 8, 'science—and': 11, 'more': 4, 'specifically,': 13, 'artificial': 10, 'intelligence': 12, 'or': 2, 'AI—concerned': 12, 'with': 4, 'giving': 6, 'computers': 9, 'ability': 7, 'understand': 10, 'text': 4, 'and': 3, 'spoken': 6, 'words': 5, 'in': 2, 'much': 4, 'same': 4, 'way': 3, 'human': 5, 'beings': 6, 'can.': 4}
+
+
+
+2. Use list comprehension to create a list of cubes of the integers 1-10.
+
+list1=[pow(i,3) for i in range(1,11)]               //with the help of power function we can take a cube of 1 to 10 in list comprehension
+
+output==   [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+
+
+3. Find all of the numbers from 1–1000 that have a 6 in them
+
+list2=[i for i in range(1,1001) if "6" in str(i)]
+
+output== [6, 16, 26, 36, 46, 56, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 76, 86, 96, 106, 116, 126, 136, 146, 156, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 176, 186, 196, 206, 216, 226, 236, 246, 256, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 276, 286, 296, 306, 316, 326, 336, 346, 356, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 376, 386, 396, 406, 416, 426, 436, 446, 456, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 476, 486, 496, 506, 516, 526, 536, 546, 556, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 576, 586, 596, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 706, 716, 726, 736, 746, 756, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 776, 786, 796, 806, 816, 826, 836, 846, 856, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 876, 886, 896, 906, 916, 926, 936, 946, 956, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 976, 986, 996]
+
+
+4. Write a program to accept a number from 1 to 7 and display the name of the like 1 for Sunday, 2 for Monday and so on.
+
+list1=list(map(int,input("Enter the list elements in between 1 to 7 : ").split()))
+list2=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+b=dict(zip(list1,list2))
+b
+
+output==  Enter the list elements in between 1 to 7 : 1 2 3 4 5 6 7 
+{1: 'Sunday',
+ 2: 'Monday',
+ 3: 'Tuesday',
+ 4: 'Wednesday',
+ 5: 'Thursday',
+ 6: 'Friday',
+ 7: 'Saturday'}
+
+
+5. Accept any City from the user and Display monument of that city.
+City                                  Monument
+Delhi                            Qutub Minar, Red Fort
+Jammu and Kashmir           Shalimar Garden, Nishat Garden
+Mumbai                             Gateway Of India
+Jaipur                                 Hawa Mahal
+Kolkata                             Victoria Memorial
+
+
+city=input("Enter the city name: ").upper()
+if city=="DELHI":
+    print("The Monument in Delhi are Qutub Minar and Red Fort")
+elif city=="JAMMU AND KASHMIR":
+    print("The Monument in Jammu and kashmir are Shalimar garden and Nishat Garden")
+elif city=="MUMBAI":
+    print("The Monument in Mumbai are Gateway of India ")
+elif city=="JAIPUR":
+    print("The Monument in Jaipur are Hawa Mahal ")
+elif city=="KOLKATA":
+    print("The Monument in Kolkata are Victoria Memorial ")
+else:
+    print("You havr to entered wrong city ")
+  
+  
+  output==Enter the city name: mumbai
+The Monument in Mumbai are Gateway of India 
+
+
+6. write a program to print all prime no that falls between two numbers entered from user using for loop
+
+start=int(input("Enter the start range: "))
+end=int(input("Enter the end range: "))
+for i in range(start,end+1):
+    if i>1:
+        for j in range(2,i):
+            if i%j==0:
+                break
+        else:
+            print(i)
+
+output==
+Enter the start range: 1
+Enter the end range: 20
+2
+3
+5
+7
+11
+13
+17
+19
+
+8. Given an integer n, return True if n is within 10 of either 100 or 200
+
+number=int(input("Enter the number:"))
+if 90<=number<=110:
+    print(True)
+elif 190<=number<=210:
+    print(True)
+else:
+    print(False)
+    
+   output==Enter the number:92
+                            True
+                            
+   9. Define a function which counts vowels and consonant in a word.
+   
+   vow=[]
+con=[]
+def vow_cons():
+    name=input("Enter the name: ")
+    for i in name:
+        if i=='a' or i=='e' or i=='o' or i=='u' or i=='i':
+            vow.append(i)
+        else:
+            con.append(i)
+    print(vow)
+    print(con)
+    
+    output==vow_con()
+    Enter the name: ishan
+['i', 'a']
+['s', 'h', 'n']
+
+
+10. Define a function that accepts lowercase words and returns uppercase words
+
+def lower_upper():
+    name=input("Enter the name: ").upper()
+    name.upper()
+    return name
+   
+   
+   output== lower_upper()  
+   Enter the name: ishan
+   'ISHAN'
+   
+  11. Write a program to append data of the second list to the first list
+  
+list1=list(map(int,input("Enter the elements in 1st list: ").split()))
+list2=list(map(int,input("Enter the elements in 2nd list: ").split()))
+list1.extend(list2)
+print(list1)
+
+output== Enter the elements in 1st list: 1 2 3 4
+         Enter the elements in 2nd list: 5 6 7 8 9
+         list1=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+         
+ 12. Write a program in Python to remove repetitive items from a list
+     
+list1=list(map(int,input("Enter the elements: ").split()))
+b=set(list1)
+print(b)
+
+output==Enter the elements: 1 2 2 3 3 4 4 5 5 6 6 7  8 9
+        {1, 2, 3, 4, 5, 6, 7, 8, 9}
+     
+             OR
+    
+ list1=list(map(int,input("Enter the elements: ").split()))
+list2=[]
+for i in list1:
+    if i not in list2:
+        list2.append(i)
+print(list2)
+     
+  output==
+  Enter the elements: 1 1 2 2 3 4 5 5 6 6 7 7
+ [1, 2, 3, 4, 5, 6, 7]
+
